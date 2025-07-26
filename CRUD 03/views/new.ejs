@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Chat Entry Form</title>
+    <style>
+        .chat-form {
+            background: #fff0f5;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+            width: 350px;
+        }
+
+        .chat-form h2 {
+            text-align: center;
+            color: #d63384;
+            margin-bottom: 20px;
+        }
+
+        .chat-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #c2185b;
+            font-weight: bold;
+        }
+
+        .chat-form input,
+        .chat-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #f8bbd0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+
+        .chat-form input:focus,
+        .chat-form textarea:focus {
+            outline: none;
+            border-color: #ec407a;
+        }
+
+        .chat-form button {
+            width: 100%;
+            padding: 12px;
+            background: #ec407a;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .chat-form button:hover {
+            background: #d81b60;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="chat-form" method="POST" action="/chats">
+        <h2>Create New Message</h2>
+
+        <label for="from">From:</label>
+        <input type="text" id="from" name="from" required />
+
+        <label for="to">To:</label>
+        <input type="text" id="to" name="to" required />
+
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="msg"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</body>
+
+</html>

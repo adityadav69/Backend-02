@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: rgb(228, 199, 161);
+        }
+        .container{
+            width:300px;
+            height: 100px;
+            border: 1px solid salmon;
+            margin: 10px;
+            padding: 5px;
+        }
+        h3{
+            color: rgb(2, 40, 27);
+        }
+        p{
+            background: rgb(230, 156, 156);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Listing of all chats</h1>
+
+    <a href="/listing/new">Create New Chats</a>
+
+    <% for(let chat of chats){ %>
+        <div class="container">
+        <h3>Sent By: <%=chat.sentby%>
+        </h3>
+        <p><%=chat.message%></p>
+        <h3>Recieved By: <%=chat.recievedby%>
+        </h3>
+    </div>
+        <% } %>
+
+</body>
+
+</html>

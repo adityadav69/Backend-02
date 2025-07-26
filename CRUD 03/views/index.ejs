@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini WhatsAPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>WhatsAPP Chats</h1>
+    <h2 class="newchat"><a href="/chats/new">Create New Chat</a></h2>
+    <% for(let chat of chats){ %>
+    <div class="chats">
+    <h3 class="from">From: <%=chat.from%></h3>
+    <div class="message">Message: <%=chat.msg%></div>
+    <form method="get" action="/chats/<%=chat.id%>/edit">
+        <button id="btn">Edit the Message</button>
+    </form>
+     <form method="POST" action="/chats/<%=chat.id%>/delete?_method=DELETE">
+        <button id="del">Delete the Message</button>
+    </form>
+    <h3 class="to">To: <%=chat.to%></h3>
+    </div>
+<%}%> 
+<script src="app.js"></script>
+</body>
+</html>
+
+ 

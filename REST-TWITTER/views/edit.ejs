@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="edit">
+    <h1>Edit Tweets</h1>
+    <h2 class="user">username @ <%=tweet.username%>
+    <h3>Tweet:</h3>
+    <form method="post" action="/tweets/edit/<%=tweet.id%>?_method=patch">
+    <textarea name="tweet" id="" rows="10" cols="30"><%=tweet.tweet%></textarea>
+        <button>submit</button>
+    </form>
+</div>
+</body>
+
+</html>

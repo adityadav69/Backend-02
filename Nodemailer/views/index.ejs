@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sending mail</title>
+</head>
+
+<body>
+    <form method="POST" action="/send/mail">
+        <h1>Contact Us</h1>
+        <label>Please! Enter Your name : </label><br>
+        <input type="text" name="name"><br><br><br>
+        <label>Please! Enter Your email : </label><br>
+        <input type="text" name="email"><br><br><br>
+        <label>Please! Enter Your contact number : </label><br>
+        <input type="text" name="contact"><br><br><br>
+        <label>Please! Select Your Query :</label><br>
+        <select name="userQuery">
+            <option value="Membership Enquiry">Membership Enquiry</option>
+            <option value="Personal Training">Personal Training</option>
+            <option value="Diet Plan">Diet Plan</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

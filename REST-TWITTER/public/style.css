@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(1, 4, 21);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: fit-content;
+    margin: 0 auto;
+}
+.post{
+    background-color: rgb(2, 7, 34);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid burlywood;
+    padding: 10px;
+}
+.user{
+    color: rgb(80, 153, 129);
+    font-family: 'Courier New', Courier, monospace;
+}
+.tweet{
+    font-style: italic;
+}
+a{
+    color: aliceblue;
+    font-weight: 800;
+    font-size: 17px;
+}
+.add{
+    margin-left: 20px;
+}
+
+.new form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-left: 20px;
+}
+.new form input{
+    width: 400px;
+    height: 20px;
+    padding: 4px;
+    font-size: 17px;
+}
+.new form button{
+    width: 80px;
+    height: 30px;
+    background: rgb(4, 4, 120);
+    color: white;
+    border-style:none;
+    cursor: pointer;
+}
+.new form textarea{
+    padding: 4px;
+    font-size: 17px;
+}
+
+.edit{
+    margin-left: 10px;
+}
+.edit textarea{
+    font-size: 17px;
+    padding: 4px;
+}
+button{
+    width: 80px;
+    height: 30px;
+    background: rgb(4, 4, 120);
+    color: white;
+    border-style:none;
+    cursor: pointer;
+}

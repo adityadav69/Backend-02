@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: aliceblue;
+    margin: 20px 10px;
+}
+.chat{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid salmon;
+    width: 20vw;
+    margin: 20px 0;
+    gap: 5px;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.msg{
+    background: rgb(2, 24, 92);
+    color: white;
+    padding: 10px 10px;
+    width: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+button{
+    width: 70px;
+    color: aliceblue;
+    background: rgb(2, 2, 40);
+    height: 25px;
+    cursor: pointer;
+}
