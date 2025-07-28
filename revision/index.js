@@ -19,6 +19,15 @@ app.get("/apple",(req,res)=>{
     res.send("Hello i am apple path")
 })
 
+app.get("/search/:username",(req,res)=>{
+    let {username}=req.params;
+    res.send(`Hey ${username}`)
+})
+app.get("/search",(req,res)=>{
+    let {q}=req.query;
+    res.send(`Hey your query is  ${q}`)
+})
+
 app.get(/.*/, (req, res) => {
   res.send("This path doesn't exist");
   
