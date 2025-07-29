@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whats'App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="/listings/new">Add New Chats</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Chats:</h1>
+    <%for(let chat of chats){%>
+        <div class="chat-container">
+
+            <h2>Sent by: <%=chat.by%>
+            </h2>
+            <p>Message: <%=chat.message%>
+            </p>
+            <h2>Recieved by: <%=chat.to%>
+            </h2>
+            <a class="a" href="/listings/edit/<%=chat._id%>">Edit Chat</a>
+            <form method="post" action="/listings/<%=chat._id%>?_method=Delete">
+                <button>Delete Chat</button>
+            </form>
+        </div>
+        <%}%>
+</body>
+
+</html>
