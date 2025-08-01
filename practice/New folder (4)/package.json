@@ -1,5 +1,5 @@
 {
-  "name": "wanderlust-project-new",
+  "name": "new-folder-(4)",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,10 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "ejs-mate": "^4.0.0",
-    "express": "^5.1.0",
-    "method-override": "^3.0.0",
-    "mongoose": "^8.16.5"
+    "express": "^5.1.0"
   }
 }

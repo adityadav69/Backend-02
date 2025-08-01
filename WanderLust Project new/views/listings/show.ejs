@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>listing Details</h1>
-    <ul>
-        <li><%=listing.title%></li>
-        <li><%=listing.description%></li>
-        <li><%=listing.location%></li>
-        <li>&#8377 <%=listing.price.toLocaleString('en-IN')%></li>
-        <li><%=listing.country%></li>
-    </ul>
+<% layout("/layouts/boilerplate") %>
 
-</body>
-</html>
+<div class="details-container">
+  <div class="details-card">
+    <img src="<%= listing.image %>" alt="<%= listing.title %>" class="details-img" />
+
+    <div class="details-content">
+      <h1 class="details-title"><%= listing.title %></h1>
+      <p class="details-location"><i class="fas fa-map-marker-alt"></i> <%= listing.location %>, <%= listing.country %></p>
+      <p class="details-price">₹ <%= listing.price.toLocaleString("en-IN") %></p>
+      <p class="details-description"><%= listing.description %></p>
+
+      <div class="details-actions">
+        <a href="/listings/<%= listing._id %>/edit" class="edit-btn">✏️ Edit Listing</a>
+        <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" class="delete-form">
+          <button type="submit" class="delete-btn">🗑️ Delete</button>
+        </form>
+        <a href="/listings" class="edit-btn">Home</a>
+      </div>
+    </div>
+  </div>
+</div>
