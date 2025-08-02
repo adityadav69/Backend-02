@@ -1,0 +1,9 @@
+<% layout("/layouts/boilerplate") %>
+<div class="error-wrapper">
+    <div class="error-container">
+      <h1 class="error-code"><%= err.statusCode %></h1>
+      <h2 class="error-message"><%= err.message || 'Something went wrong' %></h2>
+      <p class="error-desc">Oops! Something went wrong. Please try again or go back to home.</p>
+      <a href="/listings" class="back-btn">🏠 Go Home</a>
+    </div>
+  </div>

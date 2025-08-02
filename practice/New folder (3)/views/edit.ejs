@@ -13,11 +13,11 @@
     <div class="form-container">
         <form class="form" method="post" action="/listings/<%=chat._id%>?_method=put">
             <label for="">Who are You?</label>
-            <input type="text" name="by" id="" value="<%=chat.by%>" required>
+            <input type="text" name="by" id="" value="<%=chat.by%>" >
             <label>Write the message into the box</label>
-            <textarea name="msg" required><%=chat.message%></textarea>
+            <textarea name="msg" ><%=chat.message%></textarea>
             <label for="">Whom You want to send message</label>
-            <input type="text" name="to" value="<%=chat.to%>" required>
+            <input type="text" name="to" value="<%=chat.to%>" >
             <button>Add</button>
         </form>
     </div>
